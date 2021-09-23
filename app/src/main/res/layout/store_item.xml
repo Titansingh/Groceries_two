@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/offwhite"
+    android:layout_height="wrap_content"
+    app:circularflow_radiusInDP="20dp"
+    android:layout_margin="5dp"
+    android:layout_width="wrap_content">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+
+   >
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/apple"/>
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@+id/image_view"
+        android:text="Washington Apples"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_marginStart="10dp"
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_name"
+        android:layout_toEndOf="@+id/image_view"
+        android:text="Type"
+        android:textStyle="italic" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/storage_life"
+        android:textStyle="italic"
+        android:layout_toEndOf="@+id/premium"
+        android:layout_marginStart="10dp"
+        android:text="Storage Life"
+        android:layout_below="@+id/item_name"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/days"
+        android:textStyle="italic"
+        android:layout_toEndOf="@+id/premium"
+        android:layout_marginStart="10dp"
+        android:text="3 Days"
+        android:layout_below="@+id/storage_life"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/quantity"
+        android:textStyle="italic"
+        android:layout_toEndOf="@+id/storage_life"
+
+        android:layout_marginStart="20dp"
+        android:text="QTY"
+        android:layout_below="@+id/item_name"/>
+
+    <TextView
+        android:id="@+id/premium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/type"
+        android:layout_toEndOf="@+id/image_view"
+        android:text="Premium"
+        android:layout_marginStart="10dp"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@+id/quantity"
+        android:id="@+id/menu"
+        android:layout_toEndOf="@id/storage_life"
+        android:layout_marginStart="20dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:hint="QTY">
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_margin="10dp"
+        android:layout_below="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/orange"
+        android:layout_toEndOf="@id/storage_life"
+        app:cardCornerRadius="20dp">
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+
+                android:background="@color/white"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_baseline_remove_24"/>
+            <TextView
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:text="X2"
+                android:textColor="@color/white"
+                android:textStyle="italic"/>
+            <ImageView
+                android:background="@color/white"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_baseline_add_24"/>
+        </LinearLayout
+            >
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
+</androidx.cardview.widget.CardView>
